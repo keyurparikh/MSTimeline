@@ -1,8 +1,10 @@
 {
   "name": "visual",
   "dependencies": {
+    "globalize": "^1.4.2",
+    "lodash": "4.17.5",
     "powerbi-visuals-utils-dataviewutils": "1.2.0",
-    "lodash": "4.17.5"
+    "stickybits": "^3.7.4"
   },
   "devDependencies": {
     "@types/jquery": "2.0.41",
@@ -10,6 +12,7 @@
     "jquery": "3.2.1",
     "powerbi-visuals-tools": "1.13.1",
     "powerbi-visuals-utils-testutils": "1.2.1",
-    "typescript": "2.3.4"
+    "typescript": "2.3.4",
+    "typings": "^2.1.1"
   }
 }

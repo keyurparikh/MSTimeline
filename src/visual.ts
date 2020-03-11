@@ -24,8 +24,11 @@
  *  THE SOFTWARE.
  */
 
+ 
+
 module powerbi.extensibility.visual {
     "use strict";
+    
     export class Visual implements IVisual {
         private target: HTMLElement;
         private dataView: DataView;
