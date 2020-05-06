@@ -2,12 +2,11 @@
     border-collapse: collapse;    
     text-align: center;
     width: 100%;
-    
     table-layout: fixed;
     
 }
 .datagrid {
-   font: normal 12px/150% Arial, Helvetica, sans-serif;
+   font: normal 15px/150% Arial, Helvetica, sans-serif;
     background: #fff;
     overflow: auto;
     width: 100%;
@@ -18,36 +17,32 @@
     overflow: visible;
 }
 .datagrid table td, .datagrid table th {
-    padding: 3px 10px;
+    padding: 5px;
+   
     
 }
 
-.datagrid table thead{
-    
-}
+
 
 .datagrid table thead th {
-   background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #006699), color-stop(1, #00557F) );
-   background:-moz-linear-gradient( center top, #006699 5%, #00557F 100% );
-   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#006699', endColorstr='#00557F');
-   background-color:#006699;
-    color:#FFFFFF;
-    font-size: 15px;
-    font-weight: bold;
     //border-left: 1px solid #0070A8;
     text-align: center;
     vertical-align: middle;
+    width:auto;
+    
 }
 .datagrid table thead th:first-child {
     border-top: 1.5px solid #E1EEF4;
 }
 .datagrid table tbody td {
     color: #00557F;
-    border-left: 1px solid #E1EEF4;
-   font-size: 12px;
-   font-weight: normal;
+    border-right: 3px solid white;
+   
    overflow: visible;
+   
 }
+
+.datagrid table tbody th:first-of-type { width: 30px; }
 .datagrid table tbody .alt td {
     background: #E1EEf4;
     color: #00557F;
@@ -85,7 +80,7 @@
 .datagrid table tfoot li a {
     text-decoration: none;
     display: inline-block;
-    padding: 2px 8px;
+  //  padding: 2px 8px;
     margin: 1px;
    color: #FFFFFF;
    border: 1px solid #006699;
@@ -107,3 +102,22 @@
 //div.dhtmlx_window_active, div.dhx_modal_cover_dv {
   //  position: fixed !important;
 //}
+
+
+.rotate-table-grid th div {
+    transform: rotate(-90.0deg);
+    font-size:14px;
+  }
+
+ 
+  
+  .datagrid table .rotate-table-grid th{
+    padding-top: 15px;
+    padding-bottom: 15px;
+   
+    
+    border-top-left-radius:20px;
+  border-bottom-left-radius:20px;
+  font-weight: normal;
+    
+}
