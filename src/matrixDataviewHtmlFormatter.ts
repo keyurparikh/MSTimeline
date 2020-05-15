@@ -68,7 +68,7 @@ module powerbi.extensibility.visual {
             let res = "";
             for (let level = 0; level < levelToColumnNodesMap.length; level++) {
                 let levelNodes = levelToColumnNodesMap[level];
-                res += "<tr>";
+                res += "<tr class='columnheader'>";
                 res += "<th style='text-align: center;'></th>";
                 for (let i = 0; i < levelNodes.length; i++) {
                     let node = levelNodes[i];
