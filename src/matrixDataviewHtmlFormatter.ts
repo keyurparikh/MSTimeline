@@ -93,7 +93,7 @@ module powerbi.extensibility.visual {
             let colCount = 14;
             
             if (!(typeof root.level === 'undefined' || root.level === null)) {
-               // res += root.level === 0 ? "<tr><th style='padding-top: 10px; border-top: 1.5px solid #E1EEF4;'></th><td style='padding-top: 10px; border-top: 1.5px solid #E1EEF4;' colspan='" + colCount  + "'></td></tr>" : "<tr>";
+              
                res += "<tr class='rotate-table-grid'>";
                if(root.level === 0){
                res += "<th style='background-color:#4473c4;color:white;text-align: center;vertical-align: middle;border-top: 2px solid #E1EEF4;border-right: 1px solid #E1EEF4;' rowspan='" + (root.children.length+1) + "' ><div><span>";
@@ -101,12 +101,6 @@ module powerbi.extensibility.visual {
                 res += root.isSubtotal ? "Totals" : rootVal;
                res += "</span></div></th></tr>";
                }
-               /*else {
-                res += "<tr><th style='font-weight: normal;text-align:center;vertical-align: middle;border-right: 1px solid #E1EEF4;'>";
-               }
-                for (let level = 0; level < root.level; level++) {
-                    res += "&nbsp;&nbsp;"                    
-                }*/
 
                
 
@@ -115,7 +109,7 @@ module powerbi.extensibility.visual {
                         let temp = root.values[i].value;
                         colCount++;
                         
-                        res += "<td style='overflow:visible;white-space:nowrap;'>";
+                        res += "<td>";
                         if(temp === null)
                         {   
                             temp = ' ';                            
@@ -159,27 +153,8 @@ module powerbi.extensibility.visual {
                         }
                         
                     }
-                    res += "<td style='border: none;'><br/></td><td style='border: none;'><br/></td></tr>";
-                }/*else
-                {
-                    
-                    res += "<td style='border-top: 1.5px solid #E1EEF4;border-right: 1.5px solid #E1EEF4;'></td>"
-                    res += "<td style='border-top: 1.5px solid #E1EEF4;border-right: 1.5px solid #E1EEF4;'></td>"
-                    res += "<td style='border-top: 1.5px solid #E1EEF4;border-right: 1.5px solid #E1EEF4;'></td>"
-                    res += "<td style='border-top: 1.5px solid #E1EEF4;border-right: 1.5px solid #E1EEF4;'></td>"
-                    res += "<td style='border-top: 1.5px solid #E1EEF4;border-right: 1.5px solid #E1EEF4;'></td>"
-                    res += "<td style='border-top: 1.5px solid #E1EEF4;border-right: 1.5px solid #E1EEF4;'></td>"
-                    res += "<td style='border-top: 1.5px solid #E1EEF4;border-right: 1.5px solid #E1EEF4;'></td>"
-                    res += "<td style='border-top: 1.5px solid #E1EEF4;border-right: 1.5px solid #E1EEF4;'></td>"
-                    res += "<td style='border-top: 1.5px solid #E1EEF4;border-right: 1.5px solid #E1EEF4;'></td>"
-                    res += "<td style='border-top: 1.5px solid #E1EEF4;border-right: 1.5px solid #E1EEF4;'></td>"
-                    res += "<td style='border-top: 1.5px solid #E1EEF4;border-top: 1.5px solid #E1EEF4;border-right: 1.5px solid #E1EEF4;'></td>"
-                    res += "<td style='border-top: 1.5px solid #E1EEF4;border-right: 1.5px solid #E1EEF4;'></td>"
-                    res += "<td style='border-top: 1.5px solid #E1EEF4;border-right: 1.5px solid #E1EEF4;'></td>"
-                    res += "<td style='border-top: 1.5px solid #E1EEF4;'></td>"
-                                       
-                    res += "</tr>";
-                }*/
+                    res += "<td style='border-style: none;'></td><td style='border-style: none;'></td></tr>";
+                }
 
                 
             }

@@ -6,20 +6,16 @@
     
 }
 .datagrid {
-   font: normal 15px/150% Arial, Helvetica, sans-serif;
+   font: normal 14px/175% Arial, Helvetica, sans-serif;
     background: #fff;
     overflow: auto;
     width: 100%;
     height: 100%;
     
 }
-.datagrid table td {
-    overflow: visible;
-}
-.datagrid table td, .datagrid table th {
+
+ .datagrid table th {
     padding: 5px;
-   
-    
 }
 
 .datagrid table tr.columnheader:nth-child(1) th {  position: -webkit-sticky; position: sticky; top: 0; }
@@ -36,11 +32,14 @@
 }
 .datagrid table tbody td {
     color: #00557F;
-    border-right: 3px solid white;
-   
+    border-right: 1pt solid #f2f2f2;    
    overflow: visible;
+   padding-top: 6px;
+   padding-left:3px;
+   white-space:nowrap;
    
 }
+
 
 .datagrid table tbody th:first-of-type { width: 30px; }
 .datagrid table tbody .alt td {
@@ -114,10 +113,7 @@
   .datagrid table .rotate-table-grid th{
     padding-top: 15px;
     padding-bottom: 15px;
-   
-    
     border-top-left-radius:20px;
-  border-bottom-left-radius:20px;
-  font-weight: normal;
-    
+    border-bottom-left-radius:20px;
+    font-weight: normal;
 }
