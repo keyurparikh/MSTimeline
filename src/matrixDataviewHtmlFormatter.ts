@@ -72,12 +72,25 @@ module powerbi.extensibility.visual {
                 res += "<th style='text-align: center;'></th>";
                 for (let i = 0; i < levelNodes.length; i++) {
                     let node = levelNodes[i];
-                    if(level == 0)
+                    if(node.value == "PI7" || node.value == "0")
                     {
-                    res += "<th style='font-weight:normal;background-color:#4473c4;color:white;text-align: center;border-right: 2px solid #E1EEF4;' colspan='" + node.leafCount + "' >";
+                        if(level == 0)
+                        {
+                            res += "<th style='font-weight:normal;background-color:#EB895F;color:white;text-align: center;border-right: 2px solid #E1EEF4;' colspan='" + node.leafCount + "' >";
+                        }
+                        else{
+                            res += "<th style='font-weight:normal;background-color:#dae3f3;color:#dae3f3;text-align: center;border-right: 2px solid #E1EEF4;' colspan='" + node.leafCount + "' >";
+                        }
                     }
-                    else{
-                        res += "<th style='font-weight:normal;background-color:#dae3f3;color:black;text-align: center;border-right: 2px solid #E1EEF4;' colspan='" + node.leafCount + "' >";
+                    else
+                    {    
+                        if(level == 0)
+                        {
+                            res += "<th style='font-weight:normal;background-color:#4473c4;color:white;text-align: center;border-right: 2px solid #E1EEF4;' colspan='" + node.leafCount + "' >";
+                        }
+                        else{
+                            res += "<th style='font-weight:normal;background-color:#dae3f3;color:black;text-align: center;border-right: 2px solid #E1EEF4;' colspan='" + node.leafCount + "' >";
+                        }
                     }
                     res += node.isSubtotal ? "Totals" : node.value;
                     res += "</th>";
